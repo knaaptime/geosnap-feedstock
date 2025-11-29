@@ -42,7 +42,7 @@ requirements:
     - s3fs
     - segregation >=2.1
     - pooch
-    - pandana >=0.7
+    - pandarm >=0.0.2
 
 test:
   requires:
