@@ -1,5 +1,5 @@
 {% set name = "geosnap" %}
-{% set version = "0.15.3" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f08a7b9c15aec554023cf28c4bef66bbbbafc7db5d5a9e3e2aebd70b15eb06b1
+  sha256: b37698cf1eedef3f70106d31d871b24a6eb44cf9ac3c358423d18106ccb68753
 
 build:
   noarch: python
@@ -42,7 +42,7 @@ requirements:
     - s3fs
     - segregation >=2.1
     - pooch
-    - pandana >=0.7
+    - pandarm >=0.0.2
 
 test:
   requires:
