@@ -1,5 +1,5 @@
 {% set name = "geosnap" %}
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b37698cf1eedef3f70106d31d871b24a6eb44cf9ac3c358423d18106ccb68753
+  sha256: a4c468bf3819bea64f4e6eb57741962cebdb315c19f7aa3028b333513a4b63ec
 
 build:
   noarch: python
@@ -21,28 +21,31 @@ requirements:
     - setuptools >=61.0
     - setuptools-scm >=6.2
   run:
+    - ibis-framework
+    - numpy
+    - pyproj >=3
     - python >={{ python_min }}
     - pandas
     - giddy >=2.2.1
     - libpysal
-    - geopandas
+    - geopandas >=0.9
     - matplotlib-base
     - scikit-learn
     - seaborn
     - pyarrow >=0.14.1
     - platformdirs
     - tqdm
-    - quilt3 >=3.1.11
+    - quilt3 >=3.6
     - xlrd
     - mapclassify
     - tobler >=0.8.2
     - contextily
-    - spopt >=0.1.1
+    - spopt >=0.3.0
     - fsspec
     - s3fs
     - segregation >=2.1
     - pooch
-    - pandarm >=0.0.2
+    - pandarm
 
 test:
   requires:
