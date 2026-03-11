@@ -46,7 +46,7 @@ requirements:
     - segregation >=2.1
     - pooch
     - pandarm
-    - ibis-framework
+    - ibis-framework >=0.12
     - ultraplot
     - lonboard
 
